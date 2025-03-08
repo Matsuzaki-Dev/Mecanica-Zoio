@@ -1,0 +1,341 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: left; /* Ajustando o alinhamento do texto para que fique mais fluido */
+}
+
+/* Container genérico para todas as seções */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    overflow: hidden; /* Impede que os elementos saiam do contêiner */
+}
+
+/* Cabeçalho */
+header {
+    background: #222; /* Fundo mais escuro para um visual mais sofisticado */
+    color: #fff;
+    padding: auto;
+    min-height: 80px;
+    border-bottom: 4px solid #00B0FF; /* Azul vibrante como destaque */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra suave para profundidade */
+}
+
+/* Container do cabeçalho */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Reduzido um pouco o tamanho para dar espaçamento lateral */
+    max-width: 1000px; /* Máximo para telas grandes */
+}
+
+/* Navegação */
+header nav ul {
+    padding: auto;
+    list-style: none;
+    display: flex;
+    margin: auto;
+}
+
+header nav ul li {
+    padding: 0 50px; /* Aumentando o espaçamento entre os itens */
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.1rem; /* Tamanho de fonte ajustado para maior clareza */
+    font-weight: 600; /* Tornar o texto mais pesado e legível */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #00B0FF; /* Cor azul vibrante ao passar o mouse */
+    transform: scale(1.05); /* Pequeno aumento para indicar interação */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        padding: auto;
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start; /* Alinhando o conteúdo à esquerda em dispositivos menores */
+    }
+
+    header nav ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: auto;
+    }
+
+    header nav ul li {
+        padding: 100px auto; /* Mais espaçamento entre os itens no modo coluna */
+    }
+}
+
+/* Seção Sobre */
+#sobre {
+    padding: 60px 20px;
+    background-color: #fff;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Título da seção */
+#sobre h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #222;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+/* Imagem representativa */
+.sobre-imagem {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sobre-imagem img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Parágrafos principais */
+#sobre p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Títulos secundários */
+#sobre h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Lista de valores */
+#sobre ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+#sobre ul li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+#sobre ul li strong {
+    color: #00bcd4;
+}
+
+/* Seção de Missão, Visão, Valores */
+.empresa-missao-visao-valores {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.empresa-missao-visao-valores div {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.empresa-missao-visao-valores h3 {
+    color: #00bcd4;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.empresa-missao-visao-valores p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Seções de Compromissos */
+.compromissos {
+    margin-top: 40px;
+}
+
+.compromissos div {
+    margin-bottom: 30px;
+}
+
+.compromissos h3 {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.compromissos p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    /* Cabeçalho */
+    header {
+        padding: 10px 0;
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start; /* Alinhando o conteúdo à esquerda em dispositivos menores */
+    }
+
+    header nav ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+
+    header nav ul li {
+        padding: 10px 0;
+    }
+
+    /* Seção Sobre */
+    #sobre h2 {
+        font-size: 2rem;
+    }
+
+    .sobre-imagem img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .empresa-missao-visao-valores {
+        grid-template-columns: 1fr;
+    }
+
+    /* Ajustes de texto */
+    #sobre p, .compromissos p {
+        font-size: 1rem;
+    }
+
+    #sobre ul {
+        padding-left: 15px;
+    }
+}
+
+/* Responsividade para telas médias */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Seção de Missão, Visão, Valores */
+    .empresa-missao-visao-valores {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Ajustes para cabeçalho */
+    header nav ul li {
+        padding: 0 30px;
+    }
+}
+
+/* Responsividade para telas grandes */
+@media (min-width: 1025px) {
+    .container {
+        width: 80%;
+    }
+}
+
+
+/* Rodapé */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 40px 0;
+    font-size: 1em;
+    border-top: 4px solid #77aaff; /* Adiciona uma linha de separação */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-info {
+    text-align: left;
+}
+
+.footer-info p {
+    margin: 5px 0;
+}
+
+.footer-info a {
+    color: #77aaff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-info a:hover {
+    color: #0056b3;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-social a {
+    display: block;
+}
+
+.footer-social img {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social img:hover {
+    transform: scale(1.1); /* Efeito de zoom nos ícones de redes sociais */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-info {
+        text-align: center;
+    }
+
+    .footer-social {
+        margin-top: 20px;
+        justify-content: center;
+    }
+}

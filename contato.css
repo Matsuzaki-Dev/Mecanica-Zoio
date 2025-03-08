@@ -1,0 +1,224 @@
+/* Estilos gerais */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: auto;
+    margin: auto;
+    padding: auto;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    overflow: auto;
+    text-align: center;
+}
+
+/* Cabeçalho */
+header {
+    background: #222; /* Fundo mais escuro para um visual mais sofisticado */
+    color: #fff;
+    padding: auto;
+    min-height: 80px;
+    border-bottom: 4px solid #00B0FF; /* Azul vibrante como destaque */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra suave para profundidade */
+}
+
+/* Container do cabeçalho */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Reduzido um pouco o tamanho para dar espaçamento lateral */
+    max-width: 1000px; /* Máximo para telas grandes */
+}
+
+/* Navegação */
+header nav ul {
+    padding: auto;
+    list-style: none;
+    display: flex;
+    margin: auto;
+}
+
+header nav ul li {
+    padding: 0 50px; /* Aumentando o espaçamento entre os itens */
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.1rem; /* Tamanho de fonte ajustado para maior clareza */
+    font-weight: 600; /* Tornar o texto mais pesado e legível */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #00B0FF; /* Cor azul vibrante ao passar o mouse */
+    transform: scale(1.05); /* Pequeno aumento para indicar interação */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        padding: auto;
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start; /* Alinhando o conteúdo à esquerda em dispositivos menores */
+    }
+
+    header nav ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: auto;
+    }
+
+    header nav ul li {
+        padding: 100px auto; /* Mais espaçamento entre os itens no modo coluna */
+    }
+}
+
+/* Seção de Contato */
+#contato {
+    background-color: #fff;
+    padding: 50px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+#contato h2 {
+    font-size: 2.5rem;
+    color: #1e2a3a;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+label {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: border 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #00B0FF;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #00B0FF;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    grid-column: span 2; /* Faz o botão ocupar toda a largura do formulário */
+}
+
+button:hover {
+    background-color: #0088cc;
+    transform: translateY(-2px);
+}
+
+/* Rodapé */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.footer-info {
+    font-size: 0.9rem;
+}
+
+.footer-info a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 5px;
+    font-weight: 600;
+}
+
+.footer-info a:hover {
+    color: #00B0FF;
+}
+
+.footer-social a {
+    margin: 0 10px;
+}
+
+.footer-social img {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #contato form {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-info {
+        margin-bottom: 20px;
+    }
+
+    .footer-social {
+        margin-top: 10px;
+    }
+}

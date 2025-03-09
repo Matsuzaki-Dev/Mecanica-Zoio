@@ -1,9 +1,9 @@
 /* Estilos gerais */
 body {
     font-family: 'Roboto', sans-serif;
-    line-height: auto;
-    margin: auto;
-    padding: auto;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
     background-color: #f4f4f4;
     text-align: center;
 }
@@ -11,84 +11,78 @@ body {
 .container {
     width: 100%;
     margin: 0 auto;
-    overflow: auto;
+    overflow: hidden;
     text-align: center;
 }
 
 /* Cabeçalho */
 header {
-    background: #222; /* Fundo mais escuro para um visual mais sofisticado */
+    background: #222;
     color: #fff;
-    padding: auto;
+    padding: 20px 0;
     min-height: 80px;
-    border-bottom: 4px solid #00B0FF; /* Azul vibrante como destaque */
+    border-bottom: 4px solid #00B0FF;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra suave para profundidade */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Container do cabeçalho */
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%; /* Reduzido um pouco o tamanho para dar espaçamento lateral */
-    max-width: 1000px; /* Máximo para telas grandes */
+    width: 90%;
+    max-width: 1000px;
 }
 
 /* Navegação */
 header nav ul {
-    padding: auto;
+    padding: 0;
     list-style: none;
     display: flex;
-    margin: auto;
+    margin: 0;
 }
 
 header nav ul li {
-    padding: 0 50px; /* Aumentando o espaçamento entre os itens */
+    padding: 0 20px;
 }
 
 header nav ul li a {
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 1.1rem; /* Tamanho de fonte ajustado para maior clareza */
-    font-weight: 600; /* Tornar o texto mais pesado e legível */
+    font-size: 1.1rem;
+    font-weight: 600;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 header nav ul li a:hover {
-    color: #00B0FF; /* Cor azul vibrante ao passar o mouse */
-    transform: scale(1.05); /* Pequeno aumento para indicar interação */
+    color: #00B0FF;
+    transform: scale(1.05);
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-    header {
-        padding: auto;
-    }
-
     .header-container {
         flex-direction: column;
-        align-items: flex-start; /* Alinhando o conteúdo à esquerda em dispositivos menores */
+        align-items: center;
     }
 
     header nav ul {
         flex-direction: column;
         width: 100%;
         text-align: center;
-        padding: auto;
     }
 
     header nav ul li {
-        padding: 100px auto; /* Mais espaçamento entre os itens no modo coluna */
+        padding: 10px 0;
     }
 }
 
 /* Seção Bem-vindo */
 #bem-vindo {
-    padding: auto;
+    padding: 20px 0;
     margin: auto;
     width: 100%;
 }
@@ -98,19 +92,19 @@ header nav ul li a:hover {
     position: relative;
     width: 100%;
     margin: auto;
-    height: 240px; /* Altura da faixa */
-    background: url('bem-vindo-bg.jpg') no-repeat center center/cover; /* Substitua com sua imagem */
-    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5); /* Adicionando sombra para o efeito escuro */
+    height: 240px;
+    background: url('bem-vindo-bg.jpg') no-repeat center center/cover;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
 }
 
 .bem-vindo-banner::after {
     content: '';
     position: absolute;
-    top: 10;
-    left: 10;
-    right: 10;
-    bottom: 10;
-    background: rgba(155, 1, 1, 0.26); /* Degradê escuro para melhorar a legibilidade */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(155, 1, 1, 0.26);
     z-index: 1;
 }
 
@@ -127,12 +121,11 @@ header nav ul li a:hover {
 
 .bem-vindo-texto h2 {
     font-size: 3em;
-    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 3px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para o texto */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 .bem-vindo-texto p {
@@ -153,7 +146,6 @@ header nav ul li a:hover {
     font-weight: bold;
     text-transform: uppercase;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    letter-spacing: 1px;
 }
 
 .btn-welcome:hover {
@@ -164,45 +156,26 @@ header nav ul li a:hover {
 /* Responsividade */
 @media (max-width: 768px) {
     .bem-vindo-banner {
-        height: 300px; /* Reduzir altura em telas menores */
+        height: 200px;
     }
 
     .bem-vindo-texto h2 {
-        font-size: 2em; /* Ajuste do tamanho do título */
+        font-size: 2em;
     }
 
     .bem-vindo-texto p {
-        font-size: 1em; /* Ajuste do tamanho do texto */
+        font-size: 1em;
     }
 }
 
-
 /* Seção Serviços */
 #servicos {
-    margin: auto;
-}
-
-#servicos h2 {
-    font-size: 2em;
-    color: #333;
-    text-align: center;
-    margin-bottom: 0px;
-}
-
-#servicos .servicos-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-/* Seção Serviços */
-#servicos {
-    margin: 50px auto; /* Centraliza a seção */
-    width: 100%; /* Ajuste a largura conforme necessário */
+    margin: 50px auto;
+    width: 100%;
     padding: 20px;
-    border: 2px solid #ddd; /* Borda para o contêiner */
-    border-radius: 10px; /* Arredonda as bordas */
-    background-color: #fff; /* Cor de fundo do contêiner */
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
 }
 
 #servicos h2 {
@@ -215,30 +188,30 @@ header nav ul li a:hover {
 #servicos .servicos-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* Distribui igualmente os itens */
+    justify-content: space-between;
 }
 
 #servicos .servico {
     background: #fff;
     padding: 50px;
-    margin: 30px;
+    margin: 20px;
     border: 1px solid #ddd;
     border-radius: 100px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: calc(25% - 10px); /* Ajuste para 4 colunas */
+    width: calc(25% - 20px);
 }
 
 @media (max-width: 1024px) {
     #servicos .servico {
-        width: calc(50% - 20px); /* 2 colunas para telas médias */
+        width: calc(50% - 20px);
     }
 }
 
 @media (max-width: 768px) {
     #servicos .servico {
-        width: calc(100% - 20px); /* 1 coluna para telas menores */
+        width: calc(100% - 20px);
     }
 }
 
@@ -273,38 +246,12 @@ header nav ul li a:hover {
     color: #0056b3;
 }
 
-#servicos .servico img {
-    max-width: 150px;
-    margin-bottom: 10px;
-}
-
-#servicos .servico h3 {
-    margin-bottom: 10px;
-    color: #333;
-    font-size: 1.5em;
-}
-
-#servicos .servico p {
-    color: #666;
-}
-
-#servicos .servico a {
-    text-decoration: none;
-    color: #77aaff;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-#servicos .servico a:hover {
-    color: #0056b3;
-}
-
 /* Seção Galeria */
 #galeria {
     margin: 40px auto;
-    width: 80%; /* Ajuste a largura conforme necessário */
+    width: 80%;
     padding: 20px;
-    overflow: hidden; /* Garante que os itens não saiam da área visível */
+    overflow: hidden;
 }
 
 #galeria h2 {
@@ -314,11 +261,15 @@ header nav ul li a:hover {
     margin-bottom: 20px;
 }
 
+#galeria .galeria-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
 #galeria .galeria-item {
-    display: inline-block;
-    margin: 10px;
-    text-align: center;
-    flex-shrink: 0; /* Impede que o item encolha */
+    margin-right: 20px;
 }
 
 #galeria .galeria-item img {
@@ -335,35 +286,21 @@ header nav ul li a:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Container de Flexbox */
-#galeria .galeria-container {
-    display: flex;
-    justify-content: center; /* Alinha as imagens ao centro */
-    flex-wrap: nowrap; /* Garante que os itens fiquem em uma única linha */
-    overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
-}
-
-#galeria .galeria-item {
-    margin-right: 20px; /* Espaçamento entre as imagens */
-    flex: 0 0 auto; /* Impede que os itens encolham ou cresçam */
-}
-
-/* Layout responsivo */
+/* Responsividade */
 @media (max-width: 768px) {
     #galeria .galeria-container {
-        flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+        flex-wrap: wrap;
     }
 
     #galeria .galeria-item {
-        width: 100%; /* Cada item ocupa 100% da largura em telas menores */
-        margin-right: 0; /* Remove o espaço entre as imagens em telas menores */
+        width: 100%;
+        margin-right: 0;
     }
 }
 
-
 /* Seção Depoimentos */
 #depoimentos {
-    margin: 60px 10;
+    margin: 60px 10px;
     text-align: center;
 }
 
@@ -375,7 +312,6 @@ header nav ul li a:hover {
     letter-spacing: 2px;
 }
 
-/* Grid de depoimentos */
 .depoimentos-grid {
     display: flex;
     justify-content: space-around;
@@ -393,7 +329,7 @@ header nav ul li a:hover {
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
-    margin: 80px;
+    margin: 20px;
 }
 
 .depoimento:hover {
@@ -407,7 +343,7 @@ header nav ul li a:hover {
     height: 120px;
     object-fit: cover;
     margin-bottom: 15px;
-    border: 3px solid #77aaff; /* Borda ao redor da imagem */
+    border: 3px solid #77aaff;
 }
 
 .depoimento p {
@@ -442,14 +378,13 @@ header nav ul li a:hover {
     }
 }
 
-
 /* Rodapé */
 footer {
     background: #333;
     color: #fff;
     padding: 40px 0;
     font-size: 1em;
-    border-top: 4px solid #77aaff; /* Adiciona uma linha de separação */
+    border-top: 4px solid #77aaff;
 }
 
 .footer-container {
@@ -497,7 +432,7 @@ footer {
 }
 
 .footer-social img:hover {
-    transform: scale(1.1); /* Efeito de zoom nos ícones de redes sociais */
+    transform: scale(1.1);
 }
 
 /* Responsividade */

@@ -1,9 +1,9 @@
 /* Estilos gerais */
 body {
     font-family: 'Roboto', sans-serif;
-    line-height: auto;
-    margin: auto;
-    padding: auto;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
     background-color: #f4f4f4;
     text-align: center;
 }
@@ -11,78 +11,72 @@ body {
 .container {
     width: 100%;
     margin: 0 auto;
-    overflow: auto;
+    overflow: hidden;
     text-align: center;
 }
 
 /* Cabeçalho */
 header {
-    background: #222; /* Fundo mais escuro para um visual mais sofisticado */
+    background: #222;
     color: #fff;
-    padding: auto;
+    padding: 20px 0;
     min-height: 80px;
-    border-bottom: 4px solid #00B0FF; /* Azul vibrante como destaque */
+    border-bottom: 4px solid #00B0FF;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra suave para profundidade */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Container do cabeçalho */
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%; /* Reduzido um pouco o tamanho para dar espaçamento lateral */
-    max-width: 1000px; /* Máximo para telas grandes */
+    width: 90%;
+    max-width: 1000px;
 }
 
 /* Navegação */
 header nav ul {
-    padding: auto;
+    padding: 0;
     list-style: none;
     display: flex;
-    margin: auto;
+    margin: 0;
 }
 
 header nav ul li {
-    padding: 0 50px; /* Aumentando o espaçamento entre os itens */
+    padding: 0 20px;
 }
 
 header nav ul li a {
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 1.1rem; /* Tamanho de fonte ajustado para maior clareza */
-    font-weight: 600; /* Tornar o texto mais pesado e legível */
+    font-size: 1.1rem;
+    font-weight: 600;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 header nav ul li a:hover {
-    color: #00B0FF; /* Cor azul vibrante ao passar o mouse */
-    transform: scale(1.05); /* Pequeno aumento para indicar interação */
+    color: #00B0FF;
+    transform: scale(1.05);
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-    header {
-        padding: auto;
-    }
-
     .header-container {
         flex-direction: column;
-        align-items: flex-start; /* Alinhando o conteúdo à esquerda em dispositivos menores */
+        align-items: center;
     }
 
     header nav ul {
         flex-direction: column;
         width: 100%;
         text-align: center;
-        padding: auto;
     }
 
     header nav ul li {
-        padding: 100px auto; /* Mais espaçamento entre os itens no modo coluna */
+        padding: 10px 0;
     }
 }
 
@@ -92,8 +86,7 @@ header nav ul li a:hover {
     padding: 50px 20px;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    margin-top: 30px;
-    margin-bottom: 50px;
+    margin: 30px 0;
 }
 
 #contato h2 {
@@ -107,7 +100,6 @@ form {
     display: grid;
     gap: 20px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
     max-width: 900px;
     margin: 0 auto;
 }
@@ -149,7 +141,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    grid-column: span 2; /* Faz o botão ocupar toda a largura do formulário */
+    grid-column: span 2;
 }
 
 button:hover {

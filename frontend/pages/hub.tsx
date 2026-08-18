@@ -28,30 +28,32 @@ export default function Hub(){
 
   return (
     <div className="container">
-      <div className="header">
-        <h1 className="h1">Hub — Novidades da Oficina</h1>
-        <div className="small-muted">Últimas promoções e preços atualizados</div>
+      <div className="flex items-center justify-between mb-4">
+        <h1 className="text-xl font-semibold">Hub — Novidades da Oficina</h1>
+        <div className="text-sm text-gray-500">Últimas promoções e preços atualizados</div>
       </div>
 
-      <div className="grid">
+      <div className="grid gap-6 md:grid-cols-2">
         <div className="card">
-          <h2>Novidades</h2>
+          <h2 className="text-lg font-medium mb-3">Novidades</h2>
           <ul className="news-list">
-            {news.map(n=> (<li key={n.id}><strong>{n.title}</strong><p className="small-muted">{n.body}</p></li>))}
+            {news.map(n=> (<li key={n.id} className="mb-3"><strong className="block">{n.title}</strong><p className="text-sm text-gray-600">{n.body}</p></li>))}
           </ul>
         </div>
 
         <div className="card">
-          <h2>Preços de Peças</h2>
-          {loading ? <p className="small-muted">Carregando...</p> : (
-            <table className="table">
-              <thead><tr><th>SKU</th><th>Nome</th><th>Preço</th></tr></thead>
-              <tbody>
-                {parts.map(p=> (
-                  <tr key={p.id}><td>{p.sku}</td><td>{p.name}</td><td>{fmt(p.price)}</td></tr>
-                ))}
-              </tbody>
-            </table>
+          <h2 className="text-lg font-medium mb-3">Preços de Peças</h2>
+          {loading ? <p className="text-sm text-gray-500">Carregando...</p> : (
+            <div className="overflow-auto">
+              <table className="table w-full">
+                <thead><tr><th className="text-left text-sm text-gray-500 p-2">SKU</th><th className="text-left text-sm text-gray-500 p-2">Nome</th><th className="text-left text-sm text-gray-500 p-2">Preço</th></tr></thead>
+                <tbody>
+                  {parts.map(p=> (
+                    <tr key={p.id} className="odd:bg-gray-50"><td className="p-2">{p.sku}</td><td className="p-2">{p.name}</td><td className="p-2">{fmt(p.price)}</td></tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           )}
         </div>
       </div>

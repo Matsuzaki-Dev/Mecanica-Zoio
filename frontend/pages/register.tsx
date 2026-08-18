@@ -45,34 +45,34 @@ export default function Register() {
 
   return (
     <div className="container">
-      <div className="card">
-        <div className="header">
-          <h1 className="h1">Cadastro de Cliente</h1>
-          <div className="small-muted">Formulário protegido por API key</div>
+      <div className="card max-w-xl mx-auto">
+        <div className="flex items-center justify-between mb-4">
+          <h1 className="text-xl font-semibold">Cadastro de Cliente</h1>
+          <div className="text-sm text-gray-500">Formulário protegido por API key</div>
         </div>
 
-        <form onSubmit={submit}>
-          <div className="form-row">
-            <label>Nome</label>
-            <input className="input" value={name} onChange={e=>setName(e.target.value)} placeholder="Nome completo" />
+        <form onSubmit={submit} className="space-y-4">
+          <div>
+            <label className="block text-sm font-medium text-gray-700">Nome</label>
+            <input className="mt-1 block w-full rounded-md border-gray-200 shadow-sm px-3 py-2 focus:ring-2 focus:ring-teal-200" value={name} onChange={e=>setName(e.target.value)} placeholder="Nome completo" />
           </div>
 
-          <div className="form-row">
-            <label>Email</label>
-            <input className="input" type="email" value={email} onChange={e=>setEmail(e.target.value)} placeholder="email@exemplo.com" />
+          <div>
+            <label className="block text-sm font-medium text-gray-700">Email</label>
+            <input className="mt-1 block w-full rounded-md border-gray-200 shadow-sm px-3 py-2 focus:ring-2 focus:ring-teal-200" type="email" value={email} onChange={e=>setEmail(e.target.value)} placeholder="email@exemplo.com" />
           </div>
 
-          <div className="form-row">
-            <label>Telefone</label>
-            <input className="input" value={phone} onChange={e=>setPhone(e.target.value)} placeholder="(11) 9xxxx-xxxx" />
+          <div>
+            <label className="block text-sm font-medium text-gray-700">Telefone</label>
+            <input className="mt-1 block w-full rounded-md border-gray-200 shadow-sm px-3 py-2 focus:ring-2 focus:ring-teal-200" value={phone} onChange={e=>setPhone(e.target.value)} placeholder="(11) 9xxxx-xxxx" />
           </div>
 
-          {error && <div className="error" style={{marginBottom:12}}>{error}</div>}
-          {msg && <div className="success" style={{marginBottom:12}}>{msg}</div>}
+          {error && <div className="text-sm text-red-600">{error}</div>}
+          {msg && <div className="text-sm text-green-700">{msg}</div>}
 
-          <div style={{display:'flex',gap:8}}>
-            <button className="btn" type="submit" disabled={loading}>{loading ? 'Enviando...' : 'Cadastrar'}</button>
-            <button type="button" className="btn" style={{background:'#64748b'}} onClick={()=>{ setName(''); setEmail(''); setPhone(''); setMsg(null); setError(null); }}>
+          <div className="flex gap-3">
+            <button className="inline-flex items-center px-4 py-2 bg-teal-500 text-white rounded-md hover:bg-teal-600 disabled:opacity-60" type="submit" disabled={loading}>{loading ? 'Enviando...' : 'Cadastrar'}</button>
+            <button type="button" className="inline-flex items-center px-4 py-2 bg-gray-600 text-white rounded-md" onClick={()=>{ setName(''); setEmail(''); setPhone(''); setMsg(null); setError(null); }}>
               Limpar
             </button>
           </div>

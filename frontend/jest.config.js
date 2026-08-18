@@ -4,5 +4,9 @@ module.exports = {
   setupFilesAfterEnv: ['<rootDir>/setupTests.ts'],
   moduleNameMapper: {
     '^.+\\.(css|less|scss)$': 'identity-obj-proxy'
-  }
+  },
+  reporters: [
+    'default',
+    [ 'jest-junit', { outputDirectory: './', outputName: 'jest-junit.xml' } ]
+  ]
 };

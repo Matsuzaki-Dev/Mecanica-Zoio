@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Card from '../components/Card';
 
 type Part = { id:string, name:string, sku:string, price:string };
 
@@ -34,14 +35,14 @@ export default function Hub(){
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">
-        <div className="card">
+        <Card>
           <h2 className="text-lg font-medium mb-3">Novidades</h2>
           <ul className="news-list">
             {news.map(n=> (<li key={n.id} className="mb-3"><strong className="block">{n.title}</strong><p className="text-sm text-gray-600">{n.body}</p></li>))}
           </ul>
-        </div>
+        </Card>
 
-        <div className="card">
+        <Card>
           <h2 className="text-lg font-medium mb-3">Preços de Peças</h2>
           {loading ? <p className="text-sm text-gray-500">Carregando...</p> : (
             <div className="overflow-auto">
@@ -55,7 +56,7 @@ export default function Hub(){
               </table>
             </div>
           )}
-        </div>
+        </Card>
       </div>
     </div>
   );

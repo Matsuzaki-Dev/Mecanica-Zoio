@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import Input from '../components/Input';
+import Button from '../components/Button';
+import Card from '../components/Card';
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -45,39 +48,28 @@ export default function Register() {
 
   return (
     <div className="container">
-      <div className="card max-w-xl mx-auto">
+      <Card className="max-w-xl mx-auto">
         <div className="flex items-center justify-between mb-4">
           <h1 className="text-xl font-semibold">Cadastro de Cliente</h1>
           <div className="text-sm text-gray-500">Formulário protegido por API key</div>
         </div>
 
         <form onSubmit={submit} className="space-y-4">
-          <div>
-            <label className="block text-sm font-medium text-gray-700">Nome</label>
-            <input className="mt-1 block w-full rounded-md border-gray-200 shadow-sm px-3 py-2 focus:ring-2 focus:ring-teal-200" value={name} onChange={e=>setName(e.target.value)} placeholder="Nome completo" />
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700">Email</label>
-            <input className="mt-1 block w-full rounded-md border-gray-200 shadow-sm px-3 py-2 focus:ring-2 focus:ring-teal-200" type="email" value={email} onChange={e=>setEmail(e.target.value)} placeholder="email@exemplo.com" />
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700">Telefone</label>
-            <input className="mt-1 block w-full rounded-md border-gray-200 shadow-sm px-3 py-2 focus:ring-2 focus:ring-teal-200" value={phone} onChange={e=>setPhone(e.target.value)} placeholder="(11) 9xxxx-xxxx" />
-          </div>
+          <Input label="Nome" value={name} onChange={e=>setName(e.target.value)} placeholder="Nome completo" />
+          <Input label="Email" type="email" value={email} onChange={e=>setEmail(e.target.value)} placeholder="email@exemplo.com" />
+          <Input label="Telefone" value={phone} onChange={e=>setPhone(e.target.value)} placeholder="(11) 9xxxx-xxxx" />
 
           {error && <div className="text-sm text-red-600">{error}</div>}
           {msg && <div className="text-sm text-green-700">{msg}</div>}
 
           <div className="flex gap-3">
-            <button className="inline-flex items-center px-4 py-2 bg-teal-500 text-white rounded-md hover:bg-teal-600 disabled:opacity-60" type="submit" disabled={loading}>{loading ? 'Enviando...' : 'Cadastrar'}</button>
-            <button type="button" className="inline-flex items-center px-4 py-2 bg-gray-600 text-white rounded-md" onClick={()=>{ setName(''); setEmail(''); setPhone(''); setMsg(null); setError(null); }}>
+            <Button type="submit" disabled={loading}>{loading ? 'Enviando...' : 'Cadastrar'}</Button>
+            <Button type="button" variant="secondary" onClick={()=>{ setName(''); setEmail(''); setPhone(''); setMsg(null); setError(null); }}>
               Limpar
-            </button>
+            </Button>
           </div>
         </form>
-      </div>
+      </Card>
     </div>
   );
 }

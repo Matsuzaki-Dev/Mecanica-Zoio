@@ -1,0 +1,18 @@
+# Node
+node_modules/
+
+# Frontend artifacts
+frontend/node_modules/
+frontend/.next/
+frontend/coverage/
+frontend/jest-junit.xml
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/

@@ -14,18 +14,23 @@
     "axios": "1.5.0"
   },
   "devDependencies": {
-    "tailwindcss": "^3.5.0",
-    "postcss": "^8.4.0",
-    "autoprefixer": "^10.4.0",
-    "@tailwindcss/forms": "^0.5.3",
-    "@tailwindcss/typography": "^0.5.7",
-    "jest": "^29.0.0",
-    "ts-jest": "^29.0.0",
-    "@testing-library/react": "^14.0.0",
-    "@testing-library/jest-dom": "^6.0.0",
-    "@types/jest": "^29.0.0",
-    "identity-obj-proxy": "^3.0.0",
-    "jest-junit": "^13.0.0"
+    "tailwindcss": "3.4.7",
+    "postcss": "8.4.21",
+    "autoprefixer": "10.4.14",
+    "@tailwindcss/forms": "0.5.3",
+    "@tailwindcss/typography": "0.5.7",
+    "jest": "29.6.1",
+    "ts-jest": "29.1.0",
+    "@testing-library/react": "14.0.0",
+    "@testing-library/jest-dom": "6.0.0",
+    "@types/jest": "29.5.3",
+    "identity-obj-proxy": "3.0.0",
+    "jest-junit": "13.0.0",
+    "jest-environment-jsdom": "^29.6.1",
+    "@testing-library/user-event": "^14.4.3"
+  },
+  "overrides": {
+    "tailwindcss": "3.4.7"
   },
   "scripts": {
     "dev": "next dev -p 3000",

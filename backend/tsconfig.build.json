@@ -1,0 +1,8 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "incremental": false,
+    "tsBuildInfoFile": "./node_modules/.cache/tsbuildinfo"
+  },
+  "exclude": ["node_modules", "test", "dist"]
+}
